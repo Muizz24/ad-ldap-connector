@@ -174,7 +174,7 @@ describe('configureConnection', function () {
     });
 
     it('reports the useJWKS capability regardless of the response', async function () {
-      // Reported unconditionally so auth0-server can, depending on the tenant's deprecation status,
+      // Reported unconditionally so the Auth0 server can, depending on the tenant's deprecation status,
       // choose to stop sending a signing key down and let the connector read it from the JWKS
       // endpoint. The connector cannot inspect deprecation status itself.
       const withKey = makeStubs({ axiosResponse: { data: { signingKey: FAKE_SIGNING_KEY } } });

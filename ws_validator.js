@@ -363,7 +363,7 @@ async function setupWebsocket() {
 async function reconnect() {
   try {
     // The hub may have rotated the key it signs messages with while the socket was down, so the
-    // key captured during setup cannot be assumed current. Depending on what auth0-server replied
+    // key captured during setup cannot be assumed current. Depending on what the Auth0 server replied
     // with during the provisioning ticket process, this either re-reads the JWKS document or runs
     // the provisioning ticket process again. Failures are logged and swallowed inside
     // refreshOnReconnect so that a temporarily unreachable tenant never blocks the reconnect.
